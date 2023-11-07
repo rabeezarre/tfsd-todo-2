@@ -2,23 +2,18 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class RecipeGenerator extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            recipe: null,
-        };
-    }
+    state = {
+        recipe: null,
+    };
 
-    generateRandomRecipe = () => {
-        axios
-            .get('https://www.themealdb.com/api/json/v1/1/random.php')
-            .then((response) => {
-                const randomRecipe = response.data.meals[0];
-                this.setState({ recipe: randomRecipe });
-            })
-            .catch((error) => {
-                console.error('Error fetching random recipe:', error);
-            });
+    generateRandomRecipe = async () => {
+        try {
+            const response = await axios.get('https://www.themealdb.com/api/json/v1/1/random.php');
+            const randomRecipe = response.data.meals[0];
+            this.setState({ recipe: randomRecipe });
+        } catch (error) {
+            console.error('Error fetching random recipe:', error);
+        }
     };
 
     render() {
