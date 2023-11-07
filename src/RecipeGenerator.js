@@ -20,11 +20,11 @@ class RecipeGenerator extends Component {
         const { recipe } = this.state;
 
         return (
-            <div>
+            <div className="recipe-card">
                 <h1>Random Recipe Generator</h1>
                 <button onClick={this.generateRandomRecipe}>Generate Recipe</button>
                 {recipe && (
-                    <div>
+                    <div className="recipe-details">
                         <h2>{recipe.strMeal}</h2>
                         <img src={recipe.strMealThumb} alt={recipe.strMeal} />
                         <h3>Ingredients</h3>
