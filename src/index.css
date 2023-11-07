@@ -11,3 +11,76 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Style for the RecipeGenerator component */
+.recipe-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.recipe-card h1 {
+  color: #333;
+  text-align: center;
+}
+
+.recipe-card button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-card button:hover {
+  background-color: #0056b3;
+}
+
+.recipe-card .recipe-details {
+  margin-top: 20px;
+}
+
+.recipe-card .recipe-details h2 {
+  margin-bottom: 10px;
+  color: #007bff;
+  text-align: center;
+}
+
+.recipe-card .recipe-details img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.recipe-card .recipe-details h3 {
+  color: #333;
+}
+
+.recipe-card .recipe-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recipe-card .recipe-details ul li {
+  background-color: #f8f9fa;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.recipe-card .recipe-details p {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+}
